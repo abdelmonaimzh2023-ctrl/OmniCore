@@ -1,0 +1,43 @@
+Functional Source License, Version 1.0
+
+Copyright (c) 2026 MONAIM-FP
+
+TERMS AND CONDITIONS FOR USE, COPYING, MODIFICATION
+
+1. GRANT OF LICENSE
+
+   Subject to the terms below, you are granted a worldwide, royalty-free,
+   non-exclusive license to use, copy, and modify this software for any
+   purpose, EXCEPT as restricted in Section 2.
+
+2. RESTRICTIONS
+
+   You may NOT:
+     (a) sell, sublicense, or commercially distribute this software
+         or any derivative work as a standalone product;
+     (b) remove or alter this license, attribution, or any copyright
+         notices from the software;
+     (c) use this software for unauthorized access to any system,
+         network, or device that you do not own or have written
+         permission to test.
+
+3. AUTHORIZED USE
+
+   This software is provided exclusively for authorized security
+   testing, academic research, and defensive operations. You MUST
+   have prior written permission from the owner of any system you
+   assess. Unauthorized use is a criminal offense in most
+   jurisdictions.
+
+4. NO WARRANTY
+
+   THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED. THE AUTHOR ASSUMES NO RESPONSIBILITY FOR ANY
+   MISUSE OR DAMAGES ARISING FROM ITS USE.
+
+5. AUTOMATIC CONVERSION
+
+   Two (2) years after the release of each version, that version is
+   automatically relicensed under the Apache License, Version 2.0.
+
+For commercial licensing, contact: @monaimFp on Telegram.
