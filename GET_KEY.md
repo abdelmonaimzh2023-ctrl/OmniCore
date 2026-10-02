@@ -16,7 +16,7 @@ personally by the author.
 ### Step 1 — Run OmniCore once
 
 ```bash
-git clone https://github.com/MONAIM-FP/OmniCore.git
+git clone https://github.com/abdelmonaimzh2023-ctrl/OmniCore.git
 cd OmniCore
 ./install.sh
 python3 main.py
