@@ -90,7 +90,7 @@ researchers** running authorized engagements.
 ### Quick install (recommended)
 
 ```bash
-git clone https://github.com/MONAIM-FP/OmniCore.git
+git clone [https://github.com/MONAIM-FP/OmniCore.git](https://github.com/abdelmonaimzh2023-ctrl/OmniCore.git)
 cd OmniCore
 chmod +x install.sh
 ./install.sh
@@ -99,7 +99,7 @@ python3 main.py
 Manual install
 bash
 
-git clone https://github.com/MONAIM-FP/OmniCore.git
+git clone [https://github.com/MONAIM-FP/OmniCore.gi](https://github.com/abdelmonaimzh2023-ctrl/OmniCore.git)t
 cd OmniCore
 
 # Install Python dependency (only one: requests)
