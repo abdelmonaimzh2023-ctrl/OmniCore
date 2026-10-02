@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#7ee787"/>
+      <stop offset="50%" stop-color="#79c0ff"/>
+      <stop offset="100%" stop-color="#d2a8ff"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7ee787"/>
+      <stop offset="100%" stop-color="#79c0ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="#0d1117"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#grad2)"/>
+
+  <g transform="translate(180,160)">
+    <path d="M0,-110 L95,-55 L95,55 L0,110 L-95,55 L-95,-55 Z"
+          fill="none" stroke="url(#grad)" stroke-width="8"
+          stroke-linejoin="round"/>
+    <circle cx="0" cy="0" r="42" fill="none"
+            stroke="url(#grad)" stroke-width="8"/>
+    <circle cx="0" cy="0" r="14" fill="url(#grad)"/>
+    <path d="M-70,0 L-42,0 M42,0 L70,0 M0,-70 L0,-42 M0,42 L0,70"
+          stroke="url(#grad)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <text x="420" y="160" font-family="ui-monospace,Menlo,Consolas,monospace"
+        font-size="96" font-weight="700" fill="url(#grad)"
+        letter-spacing="-2">OmniCore</text>
+
+  <text x="425" y="215"
+        font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif"
+        font-size="24" fill="#8b949e" letter-spacing="4">
+    AUTHORIZED PENTEST FRAMEWORK
+  </text>
+
+  <text x="425" y="252"
+        font-family="ui-monospace,Menlo,Consolas,monospace"
+        font-size="14" fill="#6e7681" letter-spacing="2">
+    v1.0.0 · LINUX · MODULAR · SELF-UPDATING
+  </text>
+
+  <rect x="0" y="314" width="1200" height="6" fill="url(#grad2)"/>
+</svg>
