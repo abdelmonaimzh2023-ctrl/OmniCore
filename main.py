@@ -63,6 +63,24 @@ _PROJECT_ROOT = Path(__file__).resolve().parent
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
+# ─── Fail-closed bootstrap integrity check ──────────────────────────────
+# Runs before anything else.  If a required bootstrap file is missing,
+# OmniCore refuses to start — no files are ever modified or deleted.
+try:
+    from integrity import assert_bootstrap as _assert_bootstrap
+    _assert_bootstrap(allow_dev=True)   # dev bypass honoured if OMNICORE_DEV=1
+except ImportError:
+    # The integrity module itself is missing — refuse to start.
+    sys.stderr.write(
+        "[x] Fatal: 'integrity.py' is missing from the install root.\n"
+        "[x] Re-clone the repository or restore integrity.py.\n")
+    sys.exit(1)
+except Exception as _ie:
+    # IntegrityError carries a detailed message; print it and exit.
+    sys.stderr.write("\n" + str(_ie) + "\n")
+    sys.exit(1)
+
+
 # ─── Embedded credentials (PUBLIC — protected by Row-Level Security) ───
 # The anon key is DESIGNED to be public: it grants only the "anon" role,
 # and RLS policies on the database decide what that role may do. Shipping
