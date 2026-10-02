@@ -1,0 +1,69 @@
+# ── Python ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ── Virtual environments ────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Secrets & config ────────────────────────────────
+.env
+.env.*
+config.py
+*.key
+*.pem
+service_role*
+
+# ── OmniCore runtime data (never commit) ────────────
+session.json
+hwid_cache.json
+consent.json
+settings.json
+*.log
+logs/
+
+# ── Local outputs ───────────────────────────────────
+OmniCore-scans/
+OmniCore-reports/
+OmniCore-wireless/
+OmniCore-health/
+captures/
+kismet/
+
+# ── Admin-only tools (never commit) ─────────────────
+admin_dashboard.py
+key_manager.py
+fix_key_manager.py
+check_tools.py
+
+# ── Dynamic modules (uploaded via dashboard, not Git) ─
+core_engine.py
+session_guard.py
+tools_bootstrap.py
+distro_profile.py
+installer.py
+recon.py
+web_scan.py
+health_scan.py
+report.py
+wireless.py
+
+# ── OS files ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# ── IDE ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-*
