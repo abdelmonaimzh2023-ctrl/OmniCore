@@ -99,7 +99,7 @@ python3 main.py
 Manual install
 bash
 
-git clone [https://github.com/MONAIM-FP/OmniCore.gi](https://github.com/abdelmonaimzh2023-ctrl/OmniCore.git)t
+git clone https://github.com/abdelmonaimzh2023-ctrl/OmniCore.git
 cd OmniCore
 
 # Install Python dependency (only one: requests)
