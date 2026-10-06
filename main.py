@@ -682,32 +682,30 @@ def run(argv: Sequence[str]) -> int:
     try:
         hwid_summary = _phase1_license(palette, hwid_probe)
 
+        # ── Phase 2: sync modules from Supabase ─────────────────
+        sync_report = _phase2_sync_modules(palette, verbose=args.verbose)
 
-        # ── Start the launch session (guard for dynamic modules)
-
+        # ── Start launch session AFTER modules are on disk ──────
+        # session_guard.py lives in modules_dir, so we must add
+        # that directory to sys.path BEFORE importing it.
         try:
-
             import hwid_guard as _hg
-
             _raw_hwid = _hg.get_system_hwid()
-
         except Exception:
-
             _raw_hwid = "unknown"
 
+        _mods = Path.home() / ".local" / "share" / "OmniCore" / "modules"
+        if _mods.is_dir() and str(_mods) not in sys.path:
+            sys.path.insert(0, str(_mods))
+            logger.debug("prepended %s to sys.path", _mods)
+
         try:
-
             from session_guard import start_session
-
             start_session(_raw_hwid)
-
             logger.debug("launch session established")
-
         except Exception as _se:
-
             logger.warning("session guard unavailable: %s", _se)
 
-        sync_report = _phase2_sync_modules(palette, verbose=args.verbose)
         modules_dir = OmniPaths.modules_dir()
         context = RuntimeContext(
             app_name=APP_NAME,
